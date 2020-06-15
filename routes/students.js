@@ -41,12 +41,13 @@ router.get("/:id", async (req, res, next) => {
 // /api/studentes/
 router.post("/", async (req, res, next) => {
   // Take the form data from the request body
-  const { firstName, lastName, GPA} = req.body;
+  const { firstName, lastName, email, gpa} = req.body;
   // Create a student object
   const studentObj = {
     firstName: firstName,    
     lastName: lastName,
-    GPA: GPA,
+    email: email,
+    gpa: gpa
   };
   try {
     // Create a new student on the database
